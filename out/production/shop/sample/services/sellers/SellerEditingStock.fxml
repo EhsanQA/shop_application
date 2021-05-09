@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #5EBA9A;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.services.sellers.SellerEditingStock">
+   <children>
+      <TextField fx:id="id" layoutX="226.0" layoutY="124.0" promptText="id " />
+      <TextField fx:id="addingStockNumber" layoutX="226.0" layoutY="175.0" promptText="Adding Stock Number" />
+      <Label alignment="CENTER" layoutX="112.0" layoutY="27.0" prefHeight="17.0" prefWidth="376.0" text="Adding Stock">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Button fx:id="cancelBtn" layoutX="29.0" layoutY="332.0" mnemonicParsing="false" onAction="#cancel" style="-fx-background-color: #FF5D00;" text="Cancel" />
+      <Button fx:id="addBtn" layoutX="281.0" layoutY="255.0" mnemonicParsing="false" onAction="#add" style="-fx-background-color: #FF5D00;" text="Add" />
+      <Label fx:id="fillIn" alignment="CENTER" layoutX="198.0" layoutY="95.0" prefHeight="17.0" prefWidth="206.0" textFill="RED" />
+      <Label fx:id="success" alignment="CENTER" layoutX="197.0" layoutY="219.0" prefHeight="17.0" prefWidth="206.0" textFill="#00ff22" />
+   </children>
+</AnchorPane>

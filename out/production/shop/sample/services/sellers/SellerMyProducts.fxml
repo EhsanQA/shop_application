@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #5EBA9A;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.services.sellers.SellerMyProducts">
+   <children>
+      <Label layoutX="209.0" layoutY="14.0" text="Seller Products">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="groupCombo" layoutX="234.0" layoutY="82.0" prefWidth="150.0" promptText="Group" style="-fx-background-color: #FF5D00;" />
+      <Button fx:id="showBtn" layoutX="287.0" layoutY="124.0" mnemonicParsing="false" onAction="#show" style="-fx-background-color: #FF5D00;" text="Show" />
+      <Label fx:id="fillIn" alignment="CENTER" layoutX="28.0" layoutY="65.0" prefHeight="17.0" prefWidth="562.0" textFill="RED" />
+      <Button fx:id="backBtn" layoutX="28.0" layoutY="361.0" mnemonicParsing="false" onAction="#back" style="-fx-background-color: #FF5D00;" text="Back" />
+      <Label fx:id="sellerProducts" alignment="TOP_LEFT" layoutX="15.0" layoutY="149.0" prefHeight="212.0" prefWidth="588.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

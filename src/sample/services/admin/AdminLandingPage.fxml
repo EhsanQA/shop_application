@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #5EBA9A; -fx-border-color: #3C1F10;" styleClass="MainePane" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.services.admin.AdminLandingPage">
+    <children>
+        <Label fx:id="name" alignment="CENTER" layoutX="65.0" layoutY="23.0" prefHeight="31.0" prefWidth="493.0" text="Hello Admin">
+            <font>
+                <Font name="System Bold" size="29.0" />
+            </font>
+        </Label>
+        <Button fx:id="logOutBtn" layoutX="264.0" layoutY="338.0" mnemonicParsing="false" onAction="#logOut" prefHeight="25.0" prefWidth="94.0" style="-fx-background-radius: 15px; -fx-background-color: #FF5D00;" text="logout" />
+        <Button fx:id="addAccountBtn" layoutX="358.0" layoutY="177.0" mnemonicParsing="false" onAction="#addAccount" prefHeight="92.0" prefWidth="175.0" style="-fx-background-color: #FF5D00;" text="Add Seller" />
+      <Button fx:id="registerAtWareHouseBtn" layoutX="89.0" layoutY="177.0" mnemonicParsing="false" onAction="#registerAtWareHouse" prefHeight="92.0" prefWidth="175.0" style="-fx-background-color: #FF5D00;" text="Register at WareHouse" />
+    </children>
+</AnchorPane>
