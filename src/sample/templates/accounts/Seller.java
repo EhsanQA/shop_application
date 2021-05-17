@@ -10,7 +10,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 
-public class Seller extends Person implements Serializable {
+public class Seller extends Person implements Serializable, Editable {
 
 
     private int id;
@@ -84,7 +84,7 @@ public class Seller extends Person implements Serializable {
     }
 
 
-    public static boolean login(String email, String password){
+    public boolean login(String email, String password){
 
         for (Seller seller : Data.sellses) {
             if (seller.getEmail().equals(email) && seller.getPassword().equals(password)) {

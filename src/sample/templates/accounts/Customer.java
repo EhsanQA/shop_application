@@ -44,7 +44,7 @@ public class Customer extends Person implements Serializable {
     }
 
 
-    public static boolean login(String email, String password){
+    public boolean login(String email, String password){
 
         for (Customer customer : Data.customers) {
             if (customer.getEmail().equals(email) && customer.getPassword().equals(password)) {
