@@ -48,7 +48,7 @@ public class CustomerLoginPage {
         index = -1;
         if (username.getText().isBlank() || password.getText().isBlank()) {
             fillIn.setText("*Please Fill in the Fields");
-        } else if (Customer.login(username.getText(), password.getText())) {
+        } else if (Data.loggedCustomer.login(username.getText(), password.getText())) {
             Parent root = FXMLLoader.load(getClass().getResource("CustomerLandingPage.fxml"));
             Scene adminLoggedInScene = new Scene(root, 605, 400);
             Stage adminLoggedInStage = (Stage)((Node) event.getSource()).getScene().getWindow();
@@ -81,7 +81,7 @@ public class CustomerLoginPage {
     @FXML
     void register(ActionEvent event) throws IOException {
         SaverReader.printWriter();
-        Parent root = FXMLLoader.load(getClass().getResource("../services/costumers/customersRegistration/CustomerRegistrationPage.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("../customersRegistration/CustomerRegistrationPage.fxml"));
         Scene adminLoggedInScene = new Scene(root, 605, 490);
         Stage adminLoggedInStage = (Stage)((Node) event.getSource()).getScene().getWindow();
         adminLoggedInStage.setTitle("Admin Page");
@@ -94,7 +94,7 @@ public class CustomerLoginPage {
     @FXML
     void goBack(ActionEvent event) throws IOException {
         SaverReader.printWriter();
-        Parent root = FXMLLoader.load(getClass().getResource("../../landingPage.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("../../../landingPage.fxml"));
         Scene adminLoggedInScene = new Scene(root, 605, 400);
         Stage adminLoggedInStage = (Stage)((Node) event.getSource()).getScene().getWindow();
         adminLoggedInStage.setTitle("Shop");

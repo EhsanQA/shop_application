@@ -3,7 +3,7 @@ package sample.templates.accounts;
 
 import java.io.Serializable;
 
-public class Person implements Serializable {
+public abstract class Person implements Serializable, Loginable {
 
 
     private String name;

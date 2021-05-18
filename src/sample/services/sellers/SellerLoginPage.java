@@ -12,6 +12,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 import sample.SaverReader;
+import sample.services.data.Data;
 import sample.templates.accounts.Seller;
 
 public class SellerLoginPage {
@@ -43,7 +44,7 @@ public class SellerLoginPage {
         SaverReader.printWriter();
         if (username.getText().isBlank() || password.getText().isBlank()) {
             fillIn.setText("*Please Fill in the Fields");
-        } else if (Seller.login(username.getText(), password.getText())) {
+        } else if (Data.loggedSeller.login(username.getText(), password.getText())) {
             Parent root = FXMLLoader.load(getClass().getResource("SellerLandingPage.fxml"));
             Scene adminLoggedInScene = new Scene(root, 605, 400);
             Stage adminLoggedInStage = (Stage)((Node) event.getSource()).getScene().getWindow();

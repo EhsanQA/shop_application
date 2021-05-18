@@ -10,7 +10,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 
-public class Seller extends Person implements Serializable {
+public class Seller extends Person implements Serializable, Editable {
 
 
     private int id;
@@ -51,7 +51,7 @@ public class Seller extends Person implements Serializable {
     public String addStock(int productId, int number){
         for (Product product : Data.products){
             if (product.getId() == productId){
-                if (product.getStock() - number >= 0) {
+                if (product.getStock() + number >= 0) {
                     product.setStock(product.getStock() + number);
                     return product.getName() + " new stock is: " + product.getStock() + " +" + number;
                 }
@@ -84,7 +84,7 @@ public class Seller extends Person implements Serializable {
     }
 
 
-    public static boolean login(String email, String password){
+    public boolean login(String email, String password){
 
         for (Seller seller : Data.sellses) {
             if (seller.getEmail().equals(email) && seller.getPassword().equals(password)) {

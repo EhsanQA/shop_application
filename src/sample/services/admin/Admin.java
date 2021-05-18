@@ -19,7 +19,7 @@ class Admin extends Person implements Serializable {
     public static Admin admin;
 
 
-    public static boolean login(String email, String password) {
+    public boolean login(String email, String password) {
 
         if (admin.getEmail().equals(email) && admin.getPassword().equals(password)) {
             return true;
