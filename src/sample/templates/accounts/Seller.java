@@ -51,7 +51,7 @@ public class Seller extends Person implements Serializable, Editable {
     public String addStock(int productId, int number){
         for (Product product : Data.products){
             if (product.getId() == productId){
-                if (product.getStock() - number >= 0) {
+                if (product.getStock() + number >= 0) {
                     product.setStock(product.getStock() + number);
                     return product.getName() + " new stock is: " + product.getStock() + " +" + number;
                 }

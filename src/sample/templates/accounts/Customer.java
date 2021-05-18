@@ -58,6 +58,10 @@ public class Customer extends Person implements Serializable {
 
     public String addToCart(Product product, int stock){
 
+        if (stock < 0){
+            return "Please enter positive number!";
+        }
+
         if (currentOrder != null){
             if (product.getStock() - stock >= 0) {
                 currentOrder.addProductToCart(product);
